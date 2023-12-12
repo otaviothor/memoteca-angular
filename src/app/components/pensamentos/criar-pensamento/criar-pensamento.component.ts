@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IPensamento } from 'src/app/interfaces/IPensamento';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -6,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./criar-pensamento.component.scss'],
 })
 export class CriarPensamentoComponent {
-  public pensamento = {
-    id: '1',
+  public pensamento: IPensamento = {
+    id: 1,
     conteudo: 'learning angular 2+',
     autoria: 'dev',
     modelo: '',
