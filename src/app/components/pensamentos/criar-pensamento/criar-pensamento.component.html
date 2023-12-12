@@ -2,7 +2,7 @@
   <header class="header">
     <h2>Adicione um <br />novo pensamento</h2>
   </header>
-  <form action="">
+  <form autocomplete="off">
     <label for="pensamento">Pensamento</label>
     <input
       type="textarea"
@@ -28,6 +28,7 @@
           <input
             type="radio"
             value="modelo1"
+            name="modelo"
             id="modelo1"
             class="modelo-card"
             [(ngModel)]="pensamento.modelo"
@@ -52,6 +53,7 @@
           <input
             type="radio"
             value="modelo2"
+            name="modelo"
             id="modelo2"
             class="modelo-card"
             [(ngModel)]="pensamento.modelo"
@@ -76,6 +78,7 @@
           <input
             type="radio"
             value="modelo3"
+            name="modelo"
             id="modelo3"
             class="modelo-card"
             [(ngModel)]="pensamento.modelo"

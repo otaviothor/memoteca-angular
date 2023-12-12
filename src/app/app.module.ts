@@ -10,6 +10,8 @@ import { CriarPensamentoComponent } from './components/pensamentos/criar-pensame
 import { FormsModule } from '@angular/forms';
 import { ListarPensamentoComponent } from './components/pensamentos/listar-pensamento/listar-pensamento.component';
 import { PensamentoComponent } from './components/pensamentos/pensamento/pensamento.component';
+import { PensamentoService } from './services/pensamento.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,8 @@ import { PensamentoComponent } from './components/pensamentos/pensamento/pensame
     ListarPensamentoComponent,
     PensamentoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [], // services (declaring services here, you can use dependency injection in constructor of components)
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [PensamentoService], // services (declaring services here, you can use dependency injection in constructor of components)
   exports: [], // all the things you want export to other modules
   bootstrap: [AppComponent], // which component will be rendered in your app
 })
