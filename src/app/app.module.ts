@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 import { RodapeComponent } from './components/rodape/rodape.component';
 import { CriarPensamentoComponent } from './components/pensamentos/criar-pensamento/criar-pensamento.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { CriarPensamentoComponent } from './components/pensamentos/criar-pensame
     RodapeComponent,
     CriarPensamentoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [], // services (declaring services here, you can use dependency injection in constructor of components)
   exports: [], // all the things you want export to other modules
   bootstrap: [AppComponent], // which component will be rendered in your app
