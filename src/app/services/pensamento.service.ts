@@ -18,6 +18,13 @@ export class PensamentoService {
     return this.http.post<IPensamento>(environment.apiURL, pensamento);
   }
 
+  public editar(pensamento: IPensamento): Observable<IPensamento> {
+    return this.http.put<IPensamento>(
+      `${environment.apiURL}/${pensamento.id}`,
+      pensamento
+    );
+  }
+
   public excluir(id: number): Observable<IPensamento> {
     return this.http.delete<IPensamento>(`${environment.apiURL}/${id}`);
   }

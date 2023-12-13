@@ -11,7 +11,10 @@
     <strong>{{ pensamento.autoria }}</strong>
   </p>
   <div class="acoes">
-    <button class="botao-editar">
+    <button
+      class="botao-editar"
+      routerLink="editar-pensamento/{{ pensamento.id }}"
+    >
       <img src="/assets/imagens/icone-editar.png" alt="Ícone de editar" />
     </button>
     <button
