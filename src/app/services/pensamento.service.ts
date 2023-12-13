@@ -17,4 +17,12 @@ export class PensamentoService {
   public criar(pensamento: IPensamento): Observable<IPensamento> {
     return this.http.post<IPensamento>(environment.apiURL, pensamento);
   }
+
+  public excluir(id: number): Observable<IPensamento> {
+    return this.http.delete<IPensamento>(`${environment.apiURL}/${id}`);
+  }
+
+  public buscarPorId(id: number): Observable<IPensamento> {
+    return this.http.get<IPensamento>(`${environment.apiURL}/${id}`);
+  }
 }

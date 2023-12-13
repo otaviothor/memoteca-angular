@@ -12,6 +12,7 @@ import { ListarPensamentoComponent } from './components/pensamentos/listar-pensa
 import { PensamentoComponent } from './components/pensamentos/pensamento/pensamento.component';
 import { PensamentoService } from './services/pensamento.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ExcluirPensamentoComponent } from './components/pensamentos/excluir-pensamento/excluir-pensamento.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     CriarPensamentoComponent,
     ListarPensamentoComponent,
     PensamentoComponent,
+    ExcluirPensamentoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [PensamentoService], // services (declaring services here, you can use dependency injection in constructor of components)
